@@ -5,7 +5,7 @@ var spdy = require('spdy'),
 var options = {
 	key: fs.readFileSync('/root/certs/api.key.pem'),
     cert: fs.readFileSync('/root/certs/api.cert.crt'),
-    ca: [fs.readFileSync('/root/certs/ca_gd1.crt'), fs.readFileSync('keys/ca_gd2.crt'), fs.readFileSync('keys/ca_gd3.crt')]
+    ca: [fs.readFileSync('/root/certs/ca_gd1.crt'), fs.readFileSync('/root/certs/ca_gd2.crt'), fs.readFileSync('/root/certs/ca_gd3.crt')]
 };
  
 var server = spdy.createServer(options, function(req, res) {
